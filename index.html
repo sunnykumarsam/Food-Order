@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+<!-- <body onload="cap()"> -->
+    <div class="container">
+        <form>
+            <div class="detail" >
+                <label for="" placeholder="First Name">First Name</label><br>
+                <input type="text" id="name" onkeyup="firstNameValidate()" ><br>
+                <!-- <p id="message"></p> -->
+                <span id="message"></span><br>
+                <label for="" placeholder="Last Name">Last Name</label><br>
+                <input type="text" id="last" onkeyup="lastNamevalidate()"><br>
+                <!-- <p id="mess"></p> -->
+                <span id="mess"></span><br>
+
+            </div>
+            <div class="phone">
+                <label for="">Mobile Number</label><br>
+                <input type="tel" id="number"  onchange="validate()"><br>
+                <!-- <p id="num"></p> -->
+                <span id="num"></span><br>
+            </div>
+            <div class="email">
+                <label for="">Email</label><br>
+                <input type="email" id="email"  onchange="validateEmail()"><br>
+                <span id="span">&nbsp;</span><br>
+            </div>
+            <div class="address">
+                <label for="">Address</label><br>
+                <input type="text" id="address" ><br>
+            </div>
+            
+            <!-- fodd item......................................... -->
+
+
+            <label for="food_item">Food Item:</label>
+            <input type="text" id="food_item" name="food_item"><button type="button" onclick="searchAndAddFood()">Add</button><br>
+      
+            <h3> Food Items in Cart</h3>
+            <div id="selected_food_container">
+              <!-- Selected food items will be added here dynamically -->
+            </div>
+      
+
+             <!-- <div class="item">
+                <label for="">Item</label><br>
+                <input type="text" id="quantity" placeholder="Quantity"><br>
+                <div id="text">
+                       
+                </div>
+
+                <button id="add" onclick="Add()">+</button>
+                 <span id="total" >0</span>
+                <button id="minus" onclick="Minus()">-</button><br>    
+            </div> -->
+            <div class="captcha">
+                <input type="text" id="captcha" name="captcha" >
+                <input type="text" id="textinput" name="captcha" placeholder="Enter captcha"><br>
+                <h4 id="error"></h4><img src="refresh.png" id="refresh" onclick="cap()">
+            
+            </div>
+            <div class="submit">
+                <button type="submit" onclick="formSubmittedSuccessfully()">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
